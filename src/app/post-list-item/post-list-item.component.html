@@ -1,0 +1,12 @@
+
+<li class = list-group-item [ngClass]="{'list-group-item-success': post.loveIts > 0, 'list-group-item-danger': post.loveIts < 0}">
+  <h4>{{post.title}} </h4>
+  <p>{{post.content}} </p>
+  <p>{{post.created_at | date}}</p>
+  <button type="button" (click)="post.like()" class="btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-thumbs-up"></span> Like
+  </button>
+  <button type="button" (click)="post.dislike()" class="btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-thumbs-down"></span> Like
+  </button>
+</li>
